@@ -17,10 +17,10 @@ public class ScoreManager : MonoBehaviour
         ball.Resetball();
 
         if (leftScore >= maxScore)
-
         {
             gameOver();
         }
+        
     }
 
     public void addleftScore(int tambah)
@@ -33,6 +33,7 @@ public class ScoreManager : MonoBehaviour
         {
             gameOver();
         }
+        
     }
 
     public void gameOver()
