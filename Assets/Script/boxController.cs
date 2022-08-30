@@ -32,5 +32,6 @@ public class boxController : MonoBehaviour
             movement = Vector2.down * speed;
         }
         rig.velocity = movement;
+        Debug.Log("Test:" + movement);
     }
 }

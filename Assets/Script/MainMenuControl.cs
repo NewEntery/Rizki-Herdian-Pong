@@ -13,4 +13,9 @@ public class MainMenuControl : MonoBehaviour
     {
         Debug.Log("Created By Rizki Herdian");
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("GoodBye");
+    }
 }
