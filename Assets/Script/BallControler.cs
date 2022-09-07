@@ -20,5 +20,8 @@ public class BallControler : MonoBehaviour
     {
         transform.position = resetposition;    
     }
-   
+    public void activePowerupSpeed(float magnitude)
+    {
+        rig.velocity *= magnitude;
+    }
 }
