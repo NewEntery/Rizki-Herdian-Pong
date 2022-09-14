@@ -9,9 +9,17 @@ public class MainMenuControl : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
-    public void Author()
+    public void credit_scene()
     {
-        Debug.Log("Created By Rizki Herdian");
+        SceneManager.LoadScene("Credit_Scene");
+    }
+    public void backToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void gitHub(string link)
+    {
+        Application.OpenURL(link);
     }
     public void ExitGame()
     {

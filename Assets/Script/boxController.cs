@@ -9,6 +9,10 @@ public class boxController : MonoBehaviour
     //input
     public KeyCode Upkey;
     public KeyCode downkey;
+    public Transform tranform;
+    public Transform transform1;
+
+    private float timer;
 
     //rigbody
     private Rigidbody2D rig;
@@ -32,6 +36,20 @@ public class boxController : MonoBehaviour
             movement = Vector2.down * speed;
         }
         rig.velocity = movement;
-        Debug.Log("Test:" + movement);
+        
+    }
+    public void activePowerUp_SP(float kecepatanpadel)
+    {
+        timer += Time.deltaTime;
+        if (timer < 5)
+        {
+            rig.velocity *= kecepatanpadel;
+            Debug.Log("test :" + timer);
+        }
+    }
+
+    public void activePowerup_MP(float panjangpaddel)
+    {
+        tranform.localScale *= panjangpaddel;
     }
 }

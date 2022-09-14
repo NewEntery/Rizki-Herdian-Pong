@@ -10,6 +10,7 @@ public class PowerupManager : MonoBehaviour
     public Vector2 powerUpareamin;
     public Vector2 powerUpareamax;
     public List<GameObject> poweruptemplateList;
+
     
     private List<GameObject> poweruplist;
 
