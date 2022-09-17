@@ -5,7 +5,7 @@ using UnityEngine;
 public class boxController : MonoBehaviour
 {
     //speed
-    public int speed;
+    public float speed;
     //input
     public KeyCode Upkey;
     public KeyCode downkey;
@@ -36,20 +36,28 @@ public class boxController : MonoBehaviour
             movement = Vector2.down * speed;
         }
         rig.velocity = movement;
-        
+
     }
+    
     public void activePowerUp_SP(float kecepatanpadel)
     {
-        timer += Time.deltaTime;
-        if (timer < 5)
-        {
-            rig.velocity *= kecepatanpadel;
-            Debug.Log("test :" + timer);
-        }
+        StartCoroutine(Start1(kecepatanpadel));
     }
 
     public void activePowerup_MP(float panjangpaddel)
     {
+        StartCoroutine(start2(panjangpaddel));
+    }
+    IEnumerator Start1(float kecepatanpadel)
+    {
+        speed *= kecepatanpadel;
+        yield return new WaitForSeconds(5f);
+        speed /= kecepatanpadel;
+    }
+    IEnumerator start2(float panjangpaddel)
+    {
         tranform.localScale *= panjangpaddel;
+        yield return new WaitForSeconds(5f);
+        tranform.localScale /= panjangpaddel;
     }
 }

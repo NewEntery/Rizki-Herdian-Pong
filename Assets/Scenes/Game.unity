@@ -1128,7 +1128,7 @@ MonoBehaviour:
   manager: {fileID: 1571893296}
   ball: {fileID: 1959189030}
   paddel1: {fileID: 1341783278}
-  kecepatanpadel: 5
+  kecepatanpadel: 2
 --- !u!58 &931777418
 CircleCollider2D:
   m_ObjectHideFlags: 0

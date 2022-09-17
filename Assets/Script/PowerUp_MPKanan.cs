@@ -20,7 +20,7 @@ public class PowerUp_MPKanan : MonoBehaviour
         {
             paddel1.GetComponent<boxController>().activePowerup_MP(panjangpaddel);
 
-            Destroy(gameObject);
+            manager.Removepowerup(gameObject);
 
 
         }

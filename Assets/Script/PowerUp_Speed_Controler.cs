@@ -12,8 +12,8 @@ public class PowerUp_Speed_Controler : MonoBehaviour
         if (collision == ball)
         {
             ball.GetComponent<BallControler>().activePowerupSpeed(magnitude);
-            Destroy(gameObject);
+            manager.Removepowerup(gameObject);
         }
     }
-
+    
 }

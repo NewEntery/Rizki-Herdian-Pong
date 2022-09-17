@@ -23,5 +23,6 @@ public class BallControler : MonoBehaviour
     public void activePowerupSpeed(float magnitude)
     {
         rig.velocity *= magnitude;
+        
     }
 }

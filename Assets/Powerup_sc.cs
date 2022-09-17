@@ -6,7 +6,6 @@ public class Powerup_sc : MonoBehaviour
 {
     public PowerupManager manager;
     public Collider2D ball;
-
     public GameObject paddel1;
     public float kecepatanpadel;
 
@@ -19,9 +18,10 @@ public class Powerup_sc : MonoBehaviour
         if (collision == ball)
         {
             paddel1.GetComponent<boxController>().activePowerUp_SP(kecepatanpadel);
-            Destroy(gameObject);
+            manager.Removepowerup(gameObject);
 
 
         }
     }
 }
+
